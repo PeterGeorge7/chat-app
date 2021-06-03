@@ -1,0 +1,343 @@
+/* Start Variables */
+
+:root {
+    /* Text */
+    /* sub-heading at the top of the app UI */
+    --Pale-Violet: hsl(276, 100%, 81%);
+    /* chat on the left */
+    --Moderate-Violet: hsl(276, 55%, 52%);
+    /* chat on the right */
+    --Desaturated-Dark: hsl(271, 15%, 43%);
+    /* placeholder text */
+    --Grayish-Blue: hsl(206, 6%, 79%);
+    /* main heading */
+    --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+    /* paragraph */
+    --Dark-Grayish-Violet: hsl(270, 7%, 64%);
+    /* Gradient */
+    --Light-Magenta: hsl(293, 100%, 63%);
+    --Light-Violet: hsl(264, 100%, 61%);
+    /* Secondary */
+    /* app background */
+    --Light-Grayish-Violet: hsl(270, 20%, 96%);
+    /* submit button background */
+    --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+    /* radio button outline */
+    --Very-Light-Magenta: hsl(289, 100%, 72%);
+}
+
+
+/* End Variables */
+
+
+/* Start Global Rules */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    -webkit-scroll-behavior: smooth;
+    -moz-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    position: relative;
+}
+
+
+/* End Global Rules */
+
+
+/* Start Style Design  */
+
+body .color {
+    width: 500px;
+    height: 600px;
+    /* background-color: hsl(293deg 55% 51%); */
+    background-image: linear-gradient( 20deg, var(--Light-Violet), var(--Light-Magenta));
+    position: absolute;
+    left: -100px;
+    top: 0;
+    z-index: -1;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+@media (max-width: 991px) {
+    body .color {
+        left: -300px;
+    }
+}
+
+.design .mobile {
+    width: 350px;
+    border: 13px solid #fff;
+    border-radius: 30px;
+    position: absolute;
+    left: 330px;
+    background-color: var(--Light-Grayish-Violet);
+    box-shadow: 3px 7px 16px 0px #00000036;
+    perspective: 300px;
+    transform: perspective(300px) translateZ(-110px) translateX(-49px);
+}
+
+@media (max-width: 991px) {
+    .design .mobile {
+        left: 65px;
+    }
+}
+
+
+/* Start Style Chat Header */
+
+.design .mobile .header {
+    position: relative;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-bottom: 10px;
+    background-image: linear-gradient( 90deg, var(--Light-Violet), var(--Light-Magenta));
+    border-radius: 25px 25px 10px 10px;
+    box-shadow: 0px 3px 7px 0px #00000036;
+}
+
+.design .mobile .header:before {
+    content: "";
+    width: 60%;
+    height: 34px;
+    background-color: #fff;
+    position: absolute;
+    top: -10px;
+    left: 20%;
+    border-radius: 20px;
+}
+
+.design .mobile .header i:first-of-type {
+    position: absolute;
+    left: 18px;
+    bottom: 20px;
+    color: #fff;
+}
+
+.design .mobile .profile {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin: 0;
+}
+
+.design .mobile .profile img {
+    width: 35px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+
+.design .mobile .profile div h2 {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 3px;
+    font-weight: 400;
+}
+
+.design .mobile .profile div h3 {
+    font-size: 10px;
+    color: var(--Pale-Violet);
+    font-weight: 300;
+}
+
+.design .mobile .header i:last-of-type {
+    position: absolute;
+    right: 15px;
+    bottom: 21px;
+    color: #fff;
+    font-size: 13px;
+}
+
+
+/* End Style Chat Header */
+
+
+/* Start Style Chat Content */
+
+.design .mobile .chat {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.design .mobile .chat>h4 {
+    padding: 10px;
+    font-size: 12px;
+    margin-top: 10px;
+    border-radius: 12px;
+    font-weight: 300;
+    line-height: 1.5;
+    cursor: default;
+}
+
+.design .mobile .chat .right {
+    color: var(--Desaturated-Dark);
+    width: 60%;
+    background-color: #fff;
+    align-self: flex-end;
+    border-bottom-right-radius: unset;
+    box-shadow: 0px 2px 10px -6px #777;
+    transition: 0.3s;
+}
+
+.design .mobile .chat .right:hover {
+    margin-right: 20px;
+}
+
+.design .mobile .chat .right.small {
+    width: fit-content;
+}
+
+.design .mobile .chat .left {
+    color: var(--Moderate-Violet);
+    width: 60%;
+    background-color: rgb(202 202 202 / 27%);
+    border-bottom-left-radius: unset;
+    transition: 0.3s;
+}
+
+.design .mobile .chat .left:hover {
+    margin-left: 20px;
+}
+
+.design .mobile .chat .images {
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    margin-top: 10px;
+}
+
+.design .mobile .chat .images img {
+    width: 55px;
+    border-radius: 10px;
+}
+
+.design .mobile .chat .choice {
+    padding: 10px;
+    padding-left: 30px;
+    background-image: linear-gradient( 90deg, var(--Light-Magenta), var(--Light-Violet));
+    width: 65%;
+    margin-top: 10px;
+    border-radius: 12px;
+    border-bottom-left-radius: unset;
+    position: relative;
+}
+
+.design .mobile .chat .choice input {
+    display: none;
+}
+
+.design .mobile .chat .choice div {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid var(--Very-Light-Magenta);
+}
+
+.design .mobile .chat .choice input:checked+div {
+    background-color: #fff;
+}
+
+.design .mobile .chat .choice label {
+    color: rgba(255, 255, 255, 0.781);
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.design .mobile .chat .choice label span {
+    float: right;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.design .mobile .chat .type {
+    padding: 13px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 20px;
+    margin-top: 15px;
+    margin-bottom: 7px;
+}
+
+.design .mobile .chat .type h4 {
+    font-size: 12px;
+    color: var(--Grayish-Blue);
+    font-weight: 400;
+}
+
+.design .mobile .chat .type i {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: var(--Very-Dark-Desaturated-Violet);
+    font-size: 28px;
+}
+
+
+/* End Style Chat Content */
+
+
+/* Start Style describe  */
+
+.design .intro {
+    max-width: 455px;
+    position: absolute;
+    left: 650px;
+    top: 270px;
+}
+
+@media (max-width: 767px) {
+    .design .intro {
+        left: 50%;
+        top: unset;
+        bottom: -855px;
+        transform: translateX(-50%);
+        text-align: center;
+        width: 350px;
+        padding: 15px 0 50px;
+    }
+}
+
+@media (min-width: 768px) and (max-width:991px) {
+    .design .intro {
+        left: 400px;
+    }
+}
+
+.design .intro h1 {
+    color: var(--Very-Dark-Desaturated-Violet);
+    font-weight: 500;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.design .intro p {
+    line-height: 1.5;
+    color: var(--Dark-Grayish-Violet);
+    font-size: 15px;
+}
+
+
+/* End Style describe  */
+
+
+/* End Style Design  */
